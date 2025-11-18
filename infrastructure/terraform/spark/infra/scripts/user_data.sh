@@ -114,8 +114,8 @@ FILE_NAME="2022-11-04.txt"
 s3cmd cp \
     --config=/home/ubuntu/.s3cfg \
     --acl-public \
-    s3://otus-mlops-source-data/$FILE_NAME \
-    s3://$TARGET_BUCKET/$FILE_NAME
+    s3://otus-mlops-source-data/ \
+    s3://$TARGET_BUCKET/
 
 # Проверяем успешность копирования
 if [ $? -eq 0 ]; then
