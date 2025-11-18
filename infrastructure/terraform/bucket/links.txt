@@ -1,0 +1,38 @@
+# установка терраформ
+
+https://yandex.cloud/ru/docs/tutorials/infrastructure-management/terraform-quickstart
+https://hashicorp-releases.yandexcloud.net/terraform/
+https://developer.hashicorp.com/terraform/install
+
+# получение oauth token
+https://yandex.cloud/ru/docs/iam/concepts/authorization/oauth-token#lifetime
+
+
+# настройка terraformrc
+https://yandex.cloud/ru/docs/tutorials/infrastructure-management/terraform-quickstart#configure-provider
+
+# provider.tf
+
+terraform {
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+    }
+  }
+  required_version = ">= 0.13"
+}
+
+provider "yandex" {
+  zone = "<зона_доступности_по_умолчанию>"
+}
+
+# vscode extension
+https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform
+
+
+# vscode extensions
+https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow
+https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+
+# registry terraform
+https://registry.terraform.io/providers/yandex-cloud/yandex
