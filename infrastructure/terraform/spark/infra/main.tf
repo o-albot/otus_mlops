@@ -166,7 +166,7 @@ resource "yandex_dataproc_cluster" "dataproc_cluster" {
         disk_size          = var.dataproc_data_resources.disk_size
       }
       subnet_id   = yandex_vpc_subnet.subnet.id
-      hosts_count = 1
+      hosts_count = 3
     }
 
     subcluster_spec {
