@@ -110,9 +110,10 @@ TARGET_BUCKET=${s3_bucket}
 
 # Копируем конкретный файл из исходного бакета в наш новый бакет
 log "Copying file from source bucket to destination bucket"
-FILE_NAME="2022-11-04.txt"
+FILE_NAME="2019-02-18.txt"
 s3cmd cp \
     --config=/home/ubuntu/.s3cfg \
+    --recursive \
     --acl-public \
     s3://otus-mlops-source-data/ \
     s3://$TARGET_BUCKET/
