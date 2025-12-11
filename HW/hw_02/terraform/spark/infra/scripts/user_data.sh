@@ -108,24 +108,34 @@ chmod 600 /home/ubuntu/.s3cfg
 # Определяем целевой бакет
 TARGET_BUCKET=${s3_bucket}
 
-# Копируем конкретный файл из исходного бакета в наш новый бакет
-log "Copying file from source bucket to destination bucket"
-FILE_NAME="2019-02-18.txt"
-s3cmd cp \
-    --config=/home/ubuntu/.s3cfg \
-    --recursive \
-    --acl-public \
-    s3://otus-mlops-source-data/ \
-    s3://$TARGET_BUCKET/
+## Копируем конкретный файл из исходного бакета в наш новый бакет
+#log "Copying file from source bucket to destination bucket"
+#FILE_NAME="2019-08-22.txt"
+#s3cmd cp \
+#    --config=/home/ubuntu/.s3cfg \
+#    --acl-public \
+#    s3://otus-mlops-source-data/$FILE_NAME \
+#    s3://$TARGET_BUCKET/$FILE_NAME
 
-# Проверяем успешность копирования
-if [ $? -eq 0 ]; then
-    log "File $FILE_NAME successfully copied to $TARGET_BUCKET"
-    log "Listing contents of $TARGET_BUCKET"
-    s3cmd ls --config=/home/ubuntu/.s3cfg s3://$TARGET_BUCKET/
-else
-    log "Error occurred while copying file $FILE_NAME to $TARGET_BUCKET"
-fi
+## Копируем все файлы из исходного бакета в наш новый бакет
+#log "Copying file from source bucket to destination bucket"
+#FILE_NAME="2019-08-22.txt"
+#s3cmd cp \
+#    --config=/home/ubuntu/.s3cfg \
+#    --recursive \
+#    --acl-public \
+#    s3://otus-mlops-source-data/ \
+#    s3://$TARGET_BUCKET/
+
+
+## Проверяем успешность копирования
+#if [ $? -eq 0 ]; then
+#    log "File $FILE_NAME successfully copied to $TARGET_BUCKET"
+#    log "Listing contents of $TARGET_BUCKET"
+#    s3cmd ls --config=/home/ubuntu/.s3cfg s3://$TARGET_BUCKET/
+#else
+#    log "Error occurred while copying file $FILE_NAME to $TARGET_BUCKET"
+#fi
 
 # Создаем директорию для скриптов на прокси-машине
 log "Creating scripts directory on proxy machine"
