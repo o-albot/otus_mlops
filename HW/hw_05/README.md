@@ -1,4 +1,2 @@
-## Бакет с файлами
-s3://oa-otus-mlops/
-## Скриншот загруженых файлов в HDFS
-<img width="748" height="865" alt="hdfs_ls" src="https://github.com/user-attachments/assets/9cc0a85a-724b-4793-a39d-d5f76440a7ec" />
+## Скриншоты hw_05
+<img width="748" height="865" alt="airflow1" src="HW/hw_05/2025-12-30 16_50_22-DAGs - Airflow 1.png" />
