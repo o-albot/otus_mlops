@@ -1,2 +1,2 @@
 ## Скриншоты hw_05
-https://github.com/o-albot/otus_mlops/blob/main/HW/hw_05/2025-12-30%2016_50_22-DAGs%20-%20Airflow%201.png
+<img width="1918" height="573" alt="2025-12-30 16_50_22-DAGs - Airflow 1" src="https://github.com/user-attachments/assets/8848e2a5-5ad8-4e2a-9535-9b4822203387" />
