@@ -1,0 +1,23 @@
+============================================================
+A/B ТЕСТИРОВАНИЕ МОДЕЛЕЙ (MLflow Registry)
+============================================================
+Spark version: 3.0.3
+Input path: s3a://oa-airflow-bucket-3341f382fbf5c1d8/input_data/train.csv
+Tracking URI: http://93.77.179.11:5000
+S3 bucket: oa-airflow-bucket-3341f382fbf5c1d8
+
+=== ШАГ 1: ЗАГРУЗКА ДАННЫХ ===
+Загрузка данных: s3a://oa-airflow-bucket-3341f382fbf5c1d8/input_data/train.csv
+✓ Тестовая выборка: 15975 записей
+
+=== ШАГ 2: НАСТРОЙКА ОКРУЖЕНИЯ ===
+✓ MLflow настроен
+
+=== ШАГ 3: ЗАГРУЗКА МОДЕЛЕЙ ИЗ РЕЕСТРА MLFLOW ===
+Загрузка champion: models:/fraud_detection_model@champion
+✓ Champion модель загружена
+Загрузка challenger: models:/fraud_detection_model@challenger
+✓ Challenger модель загружена
+
+=== ШАГ 4: ОЦЕНКА МЕТРИК ===
+Метрики моделей на тестовой выборке:
