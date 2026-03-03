@@ -1,0 +1,29 @@
+START: 2026-03-03T15:26:31.689756
+Spark version: 3.0.3
+Input file: s3a://oa-airflow-bucket-b49cbce3f6109f7c/input_data/train.csv
+Kafka servers: rc1a-tujlm5283vhoa1hh.mdb.yandexcloud.net:9091
+Topic: fraud-transactions-input
+→ Скачиваем сертификат Yandex Cloud...
+✓ Сертификат скачан: /tmp/CA.pem
+✓ Kafka imported successfully
+→ Создание KafkaProducer...
+✓ KafkaProducer created successfully
+→ Загрузка данных из: s3a://oa-airflow-bucket-b49cbce3f6109f7c/input_data/train.csv
+✓ Целевая переменная 'fraud' удалена из данных
+✓ Загружено 80000 записей для отправки в Kafka
+→ Начинаем отправку данных в Kafka...
+  Отправлено 100 из 80000 записей (0.1%)
+  Отправлено 200 из 80000 записей (0.2%)
+  Отправлено 300 из 80000 записей (0.4%)
+  Отправлено 400 из 80000 записей (0.5%)
+ ...
+ 
+  Отправлено 79500 из 80000 записей (99.4%)
+  Отправлено 79600 из 80000 записей (99.5%)
+  Отправлено 79700 из 80000 записей (99.6%)
+  Отправлено 79800 из 80000 записей (99.8%)
+  Отправлено 79900 из 80000 записей (99.9%)
+  Отправлено 80000 из 80000 записей (100.0%)
+→ Ожидание подтверждения доставки всех сообщений...
+✓ SUCCESS: все 80000 сообщений успешно отправлены в топик 'fraud-transactions-input'
+✓✓✓ KAFKA DATA PRODUCTION COMPLETED ✓✓✓
